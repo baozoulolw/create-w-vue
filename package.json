@@ -4,8 +4,15 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vue-tsc && vite build",
+    "dev": "vite --mode dev",
+    "build": "vite build --mode test",
+    "build-check": "vue-tsc && yarn build",
+    "delete": "node script/delete.js",
+    "scp": "node script/scp.js",
+    "build-mock": "cd dist/mockServer && yarn install",
+    "restart-mock": "node script/restartMock.js",
+    "deploy": "node script/deploy.js",
+    "deploy-test": "yarn build && yarn deploy --mode test",
     "preview": "vite preview"
   },
   "dependencies": {

@@ -1,5 +1,7 @@
 <template>
-  <div></div>
+  <div class="w-full h-full">
+    <router-view class="w-full h-full"></router-view>
+  </div>
 </template>
 
 <script setup>
